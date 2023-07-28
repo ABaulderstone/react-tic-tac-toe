@@ -2,7 +2,6 @@ import React from 'react';
 
 const Cell = ({ children, updateBoard, row, col, player }) => {
   const onClick = () => {
-    if (children) return;
     updateBoard(row, col, player);
   };
   return (

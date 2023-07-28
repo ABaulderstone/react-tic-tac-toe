@@ -58,7 +58,7 @@ const Game = () => {
   }, [board]);
 
   const updateBoard = (row, col, player) => {
-    if (winningPlayer) return;
+    if (winningPlayer || board[row][col]) return;
     const clone = board.map((row) => [...row]);
     clone[row][col] = player;
     setBoard(clone);
